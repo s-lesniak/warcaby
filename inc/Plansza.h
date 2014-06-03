@@ -16,7 +16,10 @@ public:
 	int Wczytaj_y();
 	int Lokalizuj(Bialy_pionek Biale[12], int x, int y);
 	void Wypisz_pionki(Bialy_pionek Biale[12]);
-	void Pokaz_plansze(int plansza[8][8]);
+
+	// po co tutaj argument funkcji? usunąłem
+	void Pokaz_plansze();
+
 	char Konwertuj(int numer);
 };
 

@@ -2,7 +2,7 @@
 
 Plansza::Plansza()
 {
-	*plansza = new int[8];
+	plansza = new int*[8];
 	for(int i = 0; i < 8; i++)
 		plansza[i] = new int[8];
 
@@ -104,7 +104,7 @@ void Plansza::Wypisz_pionki(Bialy_pionek Biale[12])
              << Biale[licznik].Pozycja_y() << endl;
 }
 
-void Plansza::Pokaz_plansze(int plansza[8][8])
+void Plansza::Pokaz_plansze()
 {
     int i,j;
  
