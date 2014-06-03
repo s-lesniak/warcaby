@@ -25,7 +25,6 @@ Plansza::Plansza()
 		plansza[6][i+1] = 2;
 		plansza[5][i]   = 2;
 	}
-
 }
 
 int Plansza::Wczytaj_x()

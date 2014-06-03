@@ -1,19 +1,19 @@
-#__start__: obj stos_t1
-#	./stos_t1
+PROG=warcaby
 
-PROG=a
+__start__: obj ${PROG}
+	./${PROG}
 
 OBJ=obj/main.o obj/Pionek.o obj/Bialy_pionek.o obj/Plansza.o
 
 CPPFLAGS=-Wall -pedantic -Iinc -I/home/krzysztof/Deskopt/PAMSI/Laboratorium/Projekt/Program/inc -c
 LDFLAGS= -Wall -L/home/krzysztof/Deskopt/PAMSI/Laboratorium/Projekt/Program/obj
 
-#obj:
-#	mkdir obj
-
 all: ./${PROG}
 	./${PROG}
-	
+
+obj:
+	mkdir obj
+
 $(PROG):$(OBJ)
 	g++ ${LDFLAGS} -o $(PROG) $(OBJ) -lrt
 
@@ -28,6 +28,6 @@ obj/Bialy_pionek.o: src/Bialy_pionek.cpp
 
 obj/Plansza.o: src/Plansza.cpp
 	g++ ${CPPFLAGS} -o $@ $^ -std=c++0x
-	
+
 clean:
 	rm -f a obj/*

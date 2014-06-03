@@ -1,3 +1,5 @@
+#include <iostream>
+
 #include "Pionek.h"
 
 Pionek::Pionek(int _x, int _y, bool _damka)
